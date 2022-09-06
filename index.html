@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<title>Help Doc</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/174a567165.js" crossorigin="anonymous"></script>
+
+<script type='text/javascript'>
+function modificaLink(parametro,valore){
+	var link = document.getElementById('link').href;
+	link = "https://www.hrzucchetti.it/infoupdate/HR1/HR1_" + document.getElementById('versione').value +"_"+ document.getElementById('upd').value +".pdf";
+	document.getElementById('link').href=link;
+  document.getElementById('link').target="_blank";
+}
+</script>
+
+</head>
+<body>
+ <div class="header">
+  <h1>DOCUMENTI HELPDESK</h1>
+  <p><h2>Tutti i documenti e i link per l'assistenza Paghe Infinity - AD USO INTERNO</h2></p>
+ </div>
+
+ <div class="navbar">
+  <a href="index.html" class="active"><i class="fa-solid fa-house fa-2x" style="--fa-animation-duration: 2s;"></i></a>
+  <a href="file:///H|AssistenzaPaghe\PagheInfinity\Organizzazione e Regole di Gruppo\Turni Gruppo\TurniAssistenza_2022.xlsx" target="_blank"><i class="fa-solid fa-calendar-days fa-2x"></i></a>
+  <a href="file:///H|AssistenzaPaghe\PagheInfinity\Ferie\Ferie 2022.xlsx" target="_blank"><i class="fa-solid fa-umbrella-beach fa-2x"></i></a></span>
+  <a href="docfunz.html"><i class="fa-solid fa-folder-open fa-2x"></i></a>
+  <a href="linkutili.html"><i class="fa-solid fa-link fa-2x"></i></a>
+  <a href="https://www.zucchetti.it/areariservata/jsp/sipv_pagponte.jsp?def_nlp=HR1" target="_blank"><i class="fa-solid fa-user-doctor fa-2x"></i></a>
+  <a href="https://www.zucchetti.it/areariservata/jsp/pv_2liv_prod_p.jsp?nav=P&pCOCODCAT=0000003741" target="_blank"><i class="fa-solid fa-book fa-2x"></i></a>
+ </div>
+
+<div class="main">
+Versione: <input name="versione" type="text" id="versione" value="22.08.00" size="8" maxlength="8" />
+<br/><br/>
+UPD: <input name="upd" type="text" id="upd" value="006" size="3" maxlength="3" />
+<br/><br/>
+<button class="button" value='Crea Link Circolare' onClick="modificaLink('versione','upd')"/>
+<span>
+  <a href='index.html' id='link'>LINK CIRCOLARE</a>
+</span>
+</button>
+
+
+
+</div>
+
+</body>
+</html>
