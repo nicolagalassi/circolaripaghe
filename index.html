@@ -15,6 +15,17 @@ function modificaLink(parametro,valore){
 	document.getElementById('link').href=link;
   document.getElementById('link').target="_blank";
 }
+	
+function modificaNote(parametro,valore){
+var note = document.getElementById('note').href;
+if(document.getElementById('upd').value!='000'){
+	note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_000E.pdf";
+	}else{
+	note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_XXXE.pdf";
+	}
+document.getElementById('note').href=note;
+document.getElementById('note').target="_blank";
+}
 </script>
 
 </head>
@@ -43,6 +54,11 @@ UPD (inserire 000 per versione Master):
 <button class="button" value='Crea Link Circolare' onClick="modificaLink('versione','upd')"/>
 <span>
   <a href='index.html' class="circolare" id='link'>LINK CIRCOLARE</a>
+</span>
+</button>
+<button class="button" value='Crea Link Note' onClick="modificaNote('versione','upd')"/>
+<span>
+  <a href='index.html' class="circolare" id='note'>NOTE DI RILASCIO</a>
 </span>
 </button>
 
