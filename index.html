@@ -18,10 +18,10 @@ function modificaLink(parametro,valore){
 	
 function modificaNote(parametro,valore){
 var note = document.getElementById('note').href;
-if(document.getElementById('upd').value!='000'){
-	note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_XXXE.pdf";
-	}else{
-	note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_000E.pdf";
+if(document.getElementById('upd').value=="000"){
+note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_000E.pdf";
+}else{
+note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_XXXE.pdf";
 	}
 document.getElementById('note').href=note;
 document.getElementById('note').target="_blank";
