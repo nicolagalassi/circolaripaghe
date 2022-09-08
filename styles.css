@@ -24,7 +24,11 @@ body {
 
 /* Increase the font size of the heading */
 .header h1 {
-  font-size: 50px;
+  font-size: 40px;
+}
+
+.header h2 {
+  font-size: 20px;
 }
 
 /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
@@ -33,6 +37,7 @@ body {
   background-color: #333;
   position: sticky;
   position: -webkit-sticky;
+  text-align: center;
   top: 0;
 }
 
@@ -42,7 +47,7 @@ body {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 20px;
+  padding: 14px 35px;
   text-decoration: none;
 }
 
@@ -95,14 +100,13 @@ body {
   padding: 7px;
   color: black;
   background-color: lightblue;
-  border: 2px solid black;
+  border: 3px solid black;
  }
 
  .circolare {
    text-decoration: none;
    color: white;
-   padding: 13px 32px;
-   border: 1px;
+   padding: 13px;
   }
 
 /* Footer */
@@ -113,10 +117,10 @@ body {
 }
 
 .button {
-  background-color: #0072bc; /* Green */
+  background-color: #0072bc; /* blue */
   border-radius: 2px;
   font-family: 'Montserrat', sans-serif;
-  border: none;
+  border: 3px solid #0072bc;
   padding: 15px 25px;
   text-decoration: none;
   cursor: pointer;
@@ -136,6 +140,8 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  font-size: 20px;
+  text-align: left;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
