@@ -47,22 +47,28 @@ function modificaNote(parametro,valore){
   <a href="https://www.zucchetti.it/areariservata/jsp/pv_2liv_prod_p.jsp?nav=P&pCOCODCAT=0000003741" target="_blank"><i class="fa-solid fa-book fa-2x"></i></a>
  </div>
 
- <div class="main">
- Applicativo:
- <select name="applicativo" id="applicativo">
- <option value="HR1">Paghe Infinity</option>
- <option value="ERM">Portale HR</option>
- <option value="MD7">CU770</option>
- </select>
+<div class="main">
+<p><h2>Istruzioni per l'uso:<h3></p>
+<p><h3>Dalla scelta dell'applicativo è possibile impostare 3 applicativi,
+successivamente è necessario compilare la versione dell'applicativo, inserendo sempre tutti gli 0 utili, es. 05.28.00 oppure 22.00.00
+<br/>
+Il tasto <i class="fa-solid fa-user-doctor"></i> rimanda all'assistente virtuale, mentre <i class="fa-solid fa-book"></i> alla documentazione di Paghe Infinity
+<br/></h3></p>
+<hr align="center" size="2" width="100%" color="black" noshade>
+<br/>
+Applicativo:
+<select name="applicativo" id="applicativo">
+<option value="HR1">Paghe Infinity</option>
+<option value="ERM">Portale HR</option>
+<option value="MD7">CU770</option>
+</select>
  <br/><br/>
- Versione (es. 05.28.00, inserire sempre tutti gli 0):
+ Versione:
  <input name="versione" type="text" id="versione" value="22.08.00" size="8" maxlength="8" />
  <br/><br/>
  UPD (vuoto per versione Master):
  <input name="upd" type="text" id="upd" value="007" size="3" maxlength="3" />
-
  <br/><br/>
-
  <a href='index.html' id='link'>
   <button class="button button1" value='Crea Link Circolare' onClick="modificaLink('versione','upd')"/>
  	 SOMMARIO CAMBIAMENTI
@@ -74,6 +80,7 @@ function modificaNote(parametro,valore){
  	 NOTE DI RILASCIO
   </button>
  </a>
+ <br/>
 <h3>Se si apre una pagina vuota o con errori e sei certo che la circolare sia presente,<br/> compila il form e invia una segnalazione!
 <br/><br/>
 Per compilare il form clicca su:&nbsp&nbsp&nbsp<i class="fa-solid fa-pen" style="--fa-animation-duration: 2s;"></i><br/>
