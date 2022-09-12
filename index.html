@@ -11,21 +11,26 @@
 <script type='text/javascript'>
 function modificaLink(parametro,valore){
 	var link = document.getElementById('link').href;
-	link = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_"+ document.getElementById('upd').value +".pdf";
+	if(document.getElementById('upd').value==''){
+		link = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_000.pdf";
+  }else{
+		link = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_"+ document.getElementById('upd').value +".pdf";
+  }
 	document.getElementById('link').href=link;
   document.getElementById('link').target="_blank";
 }
-	
+
 function modificaNote(parametro,valore){
-var note = document.getElementById('note').href;
-if(document.getElementById('upd').value=="000"){
-note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_000E.pdf";
-}else{
-note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_XXXE.pdf";
+	var note = document.getElementById('note').href;
+	if(document.getElementById('upd').value==''){
+		note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_000E.pdf";
+	}else{
+		note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_XXXE.pdf";
 	}
-document.getElementById('note').href=note;
-document.getElementById('note').target="_blank";
+	document.getElementById('note').href=note;
+	document.getElementById('note').target="_blank";
 }
+
 </script>
 
 </head>
@@ -41,30 +46,30 @@ document.getElementById('note').target="_blank";
   <a href="https://www.zucchetti.it/areariservata/jsp/pv_2liv_prod_p.jsp?nav=P&pCOCODCAT=0000003741" target="_blank"><i class="fa-solid fa-book fa-2x"></i></a>
  </div>
 
-<div class="main">
-Applicativo (HR1 per PagheInfinity, ERM per Portale etc.):
-<input name="applicativo" type="text" onkeyup="this.value = this.value.toUpperCase();" id="applicativo" value="HR1" size="8" maxlength="3" />
-<br/><br/>
-Versione (es. 05.28.00, inserire sempre tutti gli 0):
-<input name="versione" type="text" id="versione" value="22.08.00" size="8" maxlength="8" />
-<br/><br/>
-UPD (inserire 000 per versione Master):
-<input name="upd" type="text" id="upd" value="006" size="3" maxlength="3" />
-<br/><br/>
-<button class="button" value='Crea Link Circolare' onClick="modificaLink('versione','upd')"/>
-<span>
-  <a href='index.html' class="circolare" id='link'>LINK CIRCOLARE</a>
-</span>
-</button>
-<button class="button" value='Crea Link Note' onClick="modificaNote('versione','upd')"/>
-<span>
-  <a href='index.html' class="circolare" id='note'>NOTE DI RILASCIO</a>
-</span>
-</button>
+ <div class="main">
+ Applicativo (HR1 per PagheInfinity, ERM per Portale etc.):
+ <input name="applicativo" type="text" onkeyup="this.value = this.value.toUpperCase();" id="applicativo" value="HR1" size="8" maxlength="3" />
+ <br/><br/>
+ Versione (es. 05.28.00, inserire sempre tutti gli 0):
+ <input name="versione" type="text" id="versione" value="22.08.00" size="8" maxlength="8" />
+ <br/><br/>
+ UPD (vuoto per versione Master):
+ <input name="upd" type="text" id="upd" value="007" size="3" maxlength="3" />
 
+ <br/><br/>
 
+ <a href='index.html' id='link'>
+  <button class="button button1" value='Crea Link Circolare' onClick="modificaLink('versione','upd')"/>
+ 	 SOMMARIO CAMBIAMENTI
+  </button>
+ </a>
+
+ <a href='index.html' id='note'>
+  <button class="button button2" value='Crea Link Note' onClick="modificaNote('versione','upd')"/>
+ 	 NOTE DI RILASCIO
+  </button>
+ </a>
 
 </div>
-
 </body>
 </html>
