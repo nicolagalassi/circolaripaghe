@@ -49,42 +49,42 @@ function modificaNote(parametro,valore){
 
 <div class="main">
 <p><h2>Istruzioni per l'uso:<h3></p>
-<p><h3>Dalla scelta dell'applicativo è possibile impostare 3 applicativi,
-successivamente è necessario compilare la versione dell'applicativo, inserendo sempre tutti gli 0 utili, es. 05.28.00 oppure 22.00.00 .
+<p><h3>Dalla scelta "Applicativo" è possibile selezionare tra 3 opzioni,
+successivamente è necessario compilare la versione dell'applicativo stesso,<br/> inserendo sempre tutti gli 0 utili, es. "05.28.00" (senza le virgolette) oppure "22.00.00".
 <br/>
-Inserire quindi l'UPD, indicando il codice con gli 0 utili, es. 001, 002 etc. oppure lasciare il campo vuoto per ottenere la versione master/principale.
-	<br/>
-Cliccare quindi su Sommario Cambiamenti, oppure Note di Rilascio (potrebbero esserci dei problemi sulle note di rilascio di Portale).
-<br/>
-Il tasto <i class="fa-solid fa-user-doctor"></i> rimanda all'assistente virtuale, mentre <i class="fa-solid fa-book"></i> alla documentazione di Paghe Infinity
+Il tasto &nbsp<i class="fa-solid fa-user-doctor"></i>&nbsp rimanda all'assistente virtuale, mentre &nbsp<i class="fa-solid fa-book"></i>&nbsp alla documentazione di Paghe Infinity
 <br/></h3></p>
 <hr align="center" size="2" width="100%" color="black" noshade>
-<br/>
-Applicativo:
+<p><label>
+Applicativo:<br/>
 <select name="applicativo" id="applicativo">
 <option value="HR1">Paghe Infinity</option>
 <option value="ERM">Portale HR</option>
 <option value="MD7">CU770</option>
 </select>
- <br/><br/>
+</label></p>
+<p><label>
  Versione:
  <input name="versione" type="text" id="versione" value="22.08.00" size="8" maxlength="8" />
- <br/><br/>
- UPD:
+</label></p>
+<p><label>
+ UPD (vuoto per versione Master):
  <input name="upd" type="text" id="upd" value="007" size="3" maxlength="3" />
- <br/>
- <a href='index.html' id='link'>
+</label></p>
+<p>
+ <a href='index.html' class="sommario" id='link'>
   <button class="button button1" value='Crea Link Circolare' onClick="modificaLink('versione','upd')"/>
  	 SOMMARIO CAMBIAMENTI
   </button>
  </a>
-
- <a href='index.html' id='note'>
+</p>
+<p>
+ <a href='index.html' class="sommario" id='note'>
   <button class="button button2" value='Crea Link Note' onClick="modificaNote('versione','upd')"/>
  	 NOTE DI RILASCIO
   </button>
  </a>
- <br/>
+</p>
 <h3>Se si apre una pagina vuota o con errori e sei certo che la circolare sia presente,<br/> compila il form e invia una segnalazione!
 <br/><br/>
 Per compilare il form clicca su:&nbsp&nbsp&nbsp<i class="fa-solid fa-pen" style="--fa-animation-duration: 2s;"></i><br/>
