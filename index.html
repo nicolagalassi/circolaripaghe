@@ -9,16 +9,28 @@
 <script src="https://kit.fontawesome.com/174a567165.js" crossorigin="anonymous"></script>
 
 <script type='text/javascript'>
+
+function EnableDisableTextBox() {
+			 var chkUPD = document.getElementById("chkUPD");
+			 var upd = document.getElementById("upd");
+			 upd.disabled = chkUPD.checked ? false : true;
+			 if (!upd.disabled) {
+					 upd.focus();
+			 }
+	 }
+
 function modificaLink(parametro,valore){
 	var link = document.getElementById('link').href;
-	if(document.getElementById('upd').value==''){
+	if(document.getElementById('chkMaster').checked) {
 		link = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_000.pdf";
-  }else{
+	}else if(document.getElementById('chkUPD').checked) {
 		link = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_"+ document.getElementById('upd').value +".pdf";
-  }
+	}
 	document.getElementById('link').href=link;
-  document.getElementById('link').target="_blank";
+	document.getElementById('link').target="_blank";
 }
+
+
 
 function modificaNote(parametro,valore){
 	var note = document.getElementById('note').href;
@@ -30,6 +42,7 @@ function modificaNote(parametro,valore){
 	document.getElementById('note').href=note;
 	document.getElementById('note').target="_blank";
 }
+
 
 </script>
 
@@ -51,7 +64,7 @@ function modificaNote(parametro,valore){
 <p><h3>Istruzioni per l'uso:</h3></p>
 <p><h4>Dalla scelta "Applicativo" è possibile selezionare tra 3 opzioni,
 successivamente è necessario compilare la versione dell'applicativo stesso, inserendo sempre tutti gli 0 utili, es. "05.28.00" (senza le virgolette) oppure "22.00.00".
-<br/>Compilare quindi la versione dell'UPD (es. 001) oppure non compilarlo per cercare la versione Master/Principale.<br/>
+<br/>Se si vuole ricercare un UPD inserire il check nel relativo punto e indicare la versione, es. 001.<br/>
 Il tasto &nbsp<i class="fa-solid fa-user-doctor"></i>&nbsp rimanda all'assistente virtuale, mentre &nbsp<i class="fa-solid fa-book"></i>&nbsp alla documentazione di Paghe Infinity
 <br/></h4></p>
 <br/>
@@ -59,24 +72,35 @@ Il tasto &nbsp<i class="fa-solid fa-user-doctor"></i>&nbsp rimanda all'assistent
 Applicativo:<br/>
 <select name="applicativo" id="applicativo">
 <option value="HR1">Paghe Infinity</option>
-<option value="ERM">Portale HR</option>
 <option value="MD7">CU770</option>
+<option value="ERM">Portale HR</option>
 </select>
 </label></p>
 <p><label>
  Versione:
- <input name="versione" type="text" id="versione" value="22.09.00" size="8" maxlength="8" />
+<input name="versione" type="text" id="versione" value="22.09.00" size="8" maxlength="8" />
 </label></p>
+<br>
+<label class="container" for="chkMaster">
+  	Master
+    <input type="radio" id="chkMaster" name="chkVersion" onclick="EnableDisableTextBox()" checked="yes" />
+		<span class="checkmark"></span>
+</label>
+<label class="container" for="chkUPD">
+	  UPD
+    <input type="radio" id="chkUPD" name="chkVersion" onclick="EnableDisableTextBox()" />
+		<span class="checkmark"></span>
+</label>
+<br>
 <p><label>
- UPD:
- <input name="upd" type="text" id="upd" value="" size="3" maxlength="3" />
+ Numero UPD:
+ <input name="upd" type="text" id="upd" value="001" size="3" maxlength="3" disabled="disabled"/>
 </label></p>
 <p>
  <a href='index.html' class="sommario" id='link'>
   <button class="button button1" value='Crea Link Circolare' onClick="modificaLink('versione','upd')"/>
  	 SOMMARIO CAMBIAMENTI
   </button>
- </a>
 </p>
 <p>
  <a href='index.html' class="sommario" id='note'>
@@ -92,6 +116,14 @@ Applicativo:<br/>
 <br/>
 Per compilare il form clicca su:&nbsp&nbsp&nbsp<i class="fa-solid fa-pen" style="--fa-animation-duration: 2s;"></i>&nbsp
 compila i tuoi dati, un messaggio con qualche informazione sul problema e clicca su Invia.
+</h4>
+</p>
+<p>
+<h3>Novità</h3>
+<h4>
+	-&nbsp Aggiunta scelta multipla per selezione versione Master/UPD
+	<br/>
+	-&nbsp Ottimizzato il codice del sito
 </h4>
 </p>
 </div>
