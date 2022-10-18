@@ -19,6 +19,7 @@ function EnableDisableTextBox() {
 			 }
 	 }
 
+
 function modificaLink(parametro,valore){
 	var link = document.getElementById('link').href;
 	if(document.getElementById('chkMaster').checked) {
@@ -43,14 +44,24 @@ function modificaNote(parametro,valore){
 	document.getElementById('note').target="_blank";
 }
 
+function modificaVideo(parametro,valore){
+	var video = document.getElementById('video').href;
+	if(document.getElementById('applicativo').value=="HR1") {
+		video = "https://www.zucchetti.it/areariservata/Documenti/Accademia/Videoguida_PagheI_v"+ document.getElementById('versione').value +".pdf";
+	}else{
+		video = "#";
+	}
+	document.getElementById('video').href=video;
+	document.getElementById('video').target="_blank";
+}
 
 </script>
 
 </head>
 <body>
  <div class="header">
-  <h1>CIRCOLARI APPLICATIVE</h1>
-  <p><h2>Sommari dei cambiamenti e note di rilascio</h2></p>
+	<img src="img/logo.png" alt="logo" />
+  <p><h2>Sommari dei cambiamenti delle Circolari applicative Zucchetti</h2></p>
  </div>
 
  <div class="navbar">
@@ -94,12 +105,15 @@ Applicativo:<br/>
   <button class="button button1" value='Crea Link Circolare' onClick="modificaLink('versione','upd')"/>
  	 SOMMARIO CAMBIAMENTI
   </button>
-</p>
-<p>
  <a href='index.html' class="sommario" id='note'>
   <button class="button button2" value='Crea Link Note' onClick="modificaNote('versione','upd')"/>
  	 NOTE DI RILASCIO
   </button>
+ </a>
+ <a href='index.html' class="sommario" id='video'>
+	<button class="button button2" value='Crea Link Video' onClick="modificaVideo('versione','upd')"/>
+		VIDEO SOMMARIO
+	</button>
  </a>
 </p>
 </div>
