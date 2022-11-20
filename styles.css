@@ -23,7 +23,7 @@ body {
 
 .header a{
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   color: #7858A6;
 }
 
@@ -78,8 +78,12 @@ body {
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
   background-color: #1b1919;
-  padding: 20px;
+  padding: 10px 20px;
   color: #ffffff;
+}
+
+.main h3 {
+  font-size: 30px;
 }
 
 .button {
