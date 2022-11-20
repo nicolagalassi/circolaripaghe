@@ -15,34 +15,26 @@ body {
 .header {
   text-align: center;
   padding: 20px;
-  background: #0072bc;
-  color: white;
+  background: #380379;
+  color: rgb(247, 247, 247);
 }
 
 .header a{
   text-align: center;
   padding: 10px;
-  color: white;
+  color: #790c78;
 }
 
 .header img {
-  width: 100px;
-  height: 100px;
+  width: 1000px;
+  height: 200px;
 }
 
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 30px;
-}
-
-.header h2 {
-  font-size: 20px;
-}
 
 /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(15, 15, 15);
   position: sticky;
   position: -webkit-sticky;
   text-align: center;
@@ -70,13 +62,13 @@ body {
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #209cee;
+  background-color: #790c78;
   color: white;
 }
 
 /* Active/current link */
 .navbar a.active {
-  background-color: #0072bc;
+  background-color: #380379;
   color: white;
 }
 
@@ -96,10 +88,10 @@ body {
   display:inline-block;
   font-size: 16px;
   color: white;
-  background-color: #0072bc; /* blue */
+  background-color: #790c78; /* blue */
   border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
-  border: 2px solid #0072bc;
+  border: 2px solid #380379;
   text-decoration: none;
   cursor: pointer;
   transition-duration: 0.4s;
@@ -107,31 +99,32 @@ body {
   height: 60px;
 }
 
-.button:hover {background-color: #209cee}
+.button:hover {background-color: #380379}
 
 
 .button:active {
-  background-color: #0072bc;
+  background-color: #380379;
 }
 
 button[type=submit] {
   font-size: 16px;
   color: white;
-  background-color: #0072bc; /* blue */
+  background-color: #790c78; /* blue */
   border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
-  border: 3px solid #0072bc;
-  padding: 15px 30px;
+  border: 3px solid #380379;
   text-decoration: none;
   cursor: pointer;
   transition-duration: 0.4s;
+  width: 300px;
+  height: 60px;
 }
 
-button[type=submit]:hover {background-color: #209cee}
+button[type=submit]:hover {background-color: #380379}
 
 
 button[type=submit]:active {
-  background-color: #0072bc;
+  background-color: #380379;
 }
 
 
@@ -217,7 +210,7 @@ select {
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #790c78;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */

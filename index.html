@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<title>Circolari Zucchetti</title>
+<title>SommariaMente</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="icon" href="img/favicon.ico" type="image/png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://kit.fontawesome.com/174a567165.js" crossorigin="anonymous"></script>
@@ -32,6 +32,7 @@ function modificaLink(parametro,valore){
 }
 
 
+/* al momento disattivate in quanto non utili
 
 function modificaNote(parametro,valore){
 	var note = document.getElementById('note').href;
@@ -43,6 +44,7 @@ function modificaNote(parametro,valore){
 	document.getElementById('note').href=note;
 	document.getElementById('note').target="_blank";
 }
+*/
 
 function modificaVideo(parametro,valore){
 	var video = document.getElementById('video').href;
@@ -61,7 +63,10 @@ function modificaVideo(parametro,valore){
 <body>
  <div class="header">
 	<img src="img/logo.png" alt="logo" />
-  <p><h2>Sommari dei cambiamenti delle Circolari applicative Zucchetti</h2></p>
+	<br>
+    <a href="https://twitter.com/nicolagalassi95"><i class="fab fa-twitter fa-xl" style="--fa-animation-duration: 2s;"></i></a>
+    <a href="https://github.com/nicolagalassi?tab=repositories"><i class="fab fa-github fa-xl" style="--fa-animation-duration: 2s;"></i></a>
+    <a href="https://t.me/galax95"><i class="fab fa-telegram fa-xl" style="--fa-animation-duration: 2s;"></i></a>
  </div>
 
  <div class="navbar">
@@ -103,13 +108,15 @@ Applicativo:<br/>
 <p>
  <a href='index.html' class="sommario" id='link'>
   <button class="button button1" value='Crea Link Circolare' onClick="modificaLink('versione','upd')"/>
- 	 SOMMARIO CAMBIAMENTI
+ 	 SOMMARIO dei CAMBIAMENTI
   </button>
+<!-- al momento eliminato
  <a href='index.html' class="sommario" id='note'>
   <button class="button button2" value='Crea Link Note' onClick="modificaNote('versione','upd')"/>
  	 NOTE DI RILASCIO
   </button>
  </a>
+-->
  <a href='index.html' class="sommario" id='video'>
 	<button class="button button2" value='Crea Link Video' onClick="modificaVideo('versione','upd')"/>
 		VIDEO SOMMARIO
