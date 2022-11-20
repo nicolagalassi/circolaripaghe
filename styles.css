@@ -8,6 +8,8 @@
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
+  background-color: #1b1919;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -15,14 +17,14 @@ body {
 .header {
   text-align: center;
   padding: 20px;
-  background: #380379;
+  background: #371B58;
   color: rgb(247, 247, 247);
 }
 
 .header a{
   text-align: center;
   padding: 10px;
-  color: #790c78;
+  color: #7858A6;
 }
 
 .header img {
@@ -34,7 +36,7 @@ body {
 /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
 .navbar {
   overflow: hidden;
-  background-color: rgb(15, 15, 15);
+  background-color: #4C3575;
   position: sticky;
   position: -webkit-sticky;
   text-align: center;
@@ -44,31 +46,26 @@ body {
 .navbar a {
   float: left;
   display: block;
-  color: white;
+  color: rgb(255, 255, 255);
   align-items: center;
   text-align: center;
   justify-content: center;
   padding-top: 10px;
-  width: 200px;
+  width: 150px;
   height: 40px;
   text-decoration: none;
 }
 
 
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #790c78;
+  background-color: #7858A6;
   color: white;
 }
 
 /* Active/current link */
 .navbar a.active {
-  background-color: #380379;
+  background-color: #371B58;
   color: white;
 }
 
@@ -80,18 +77,19 @@ body {
 .main {
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
-  background-color: white;
+  background-color: #1b1919;
   padding: 20px;
+  color: #ffffff;
 }
 
 .button {
   display:inline-block;
   font-size: 16px;
   color: white;
-  background-color: #790c78; /* blue */
-  border-radius: 5px;
+  background-color: #371B58; /* blue */
+  border-radius: 15px;
   font-family: 'Montserrat', sans-serif;
-  border: 2px solid #380379;
+  border: 3px solid #371B58;
   text-decoration: none;
   cursor: pointer;
   transition-duration: 0.4s;
@@ -99,20 +97,16 @@ body {
   height: 60px;
 }
 
-.button:hover {background-color: #380379}
-
-
-.button:active {
-  background-color: #380379;
-}
+.button:hover {background-color: #4C3575}
+.button:active {background-color: #4C3575;}
 
 button[type=submit] {
   font-size: 16px;
   color: white;
-  background-color: #790c78; /* blue */
-  border-radius: 5px;
+  background-color: #371B58; /* blue */
+  border-radius: 15px;
   font-family: 'Montserrat', sans-serif;
-  border: 3px solid #380379;
+  border: 3px solid #371B58;
   text-decoration: none;
   cursor: pointer;
   transition-duration: 0.4s;
@@ -120,12 +114,8 @@ button[type=submit] {
   height: 60px;
 }
 
-button[type=submit]:hover {background-color: #380379}
-
-
-button[type=submit]:active {
-  background-color: #380379;
-}
+button[type=submit]:hover {background-color: #4C3575}
+button[type=submit]:active {background-color: #4C3575;}
 
 
 input[type=text] {
@@ -133,19 +123,27 @@ input[type=text] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
-  box-sizing: border-box;
   font-size: 20px;
   text-align: left;
+  background: #4C3575;
+  border: 1px solid #4C3575;
+  color: white;
+  border-radius: 15px;
 }
+
+input[type=text]:disabled {background-color: #5B4B8A;border: 1px solid #5B4B8A; opacity: 30%;}
 
 input[type=email] {
   font-family: 'Montserrat', sans-serif;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
-  box-sizing: border-box;
   font-size: 20px;
   text-align: left;
+  background: #4C3575;
+  border: 1px solid #4C3575;
+  color: white;
+  border-radius: 15px;
 }
 
 textarea {
@@ -154,20 +152,27 @@ textarea {
   height: 250px;
   padding: 12px 20px;
   margin: 8px 0;
-  box-sizing: border-box;
   font-size: 20px;
   text-align: left;
+  background: #4C3575;
+  border: 1px solid #4C3575;
+  color: white;
+  border-radius: 15px;
 }
 
 select {
   font-family: 'Montserrat', sans-serif;
-  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
-  box-sizing: border-box;
   font-size: 20px;
   text-align: left;
+  background: #4C3575;
+  border: 1px solid #4C3575;
+  color: white;
+  width: 100%;
+  border-radius: 15px;
 }
+
 
 /* Customize the label (the container) */
 .container {
@@ -199,7 +204,7 @@ select {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: #888787;
   border-radius: 50%;
 }
 
@@ -210,7 +215,7 @@ select {
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #790c78;
+  background-color: #4C3575;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -232,7 +237,7 @@ select {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: white;
+  background: #1b1919;
 }
 
 
