@@ -1,129 +1,64 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<title>SommariaMente</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" href="img/icon.png" type="image/png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://kit.fontawesome.com/174a567165.js" crossorigin="anonymous"></script>
+    <title>SommariaMente</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/174a567165.js" crossorigin="anonymous"></script>
 
-<script type='text/javascript'>
-
-function EnableDisableTextBox() {
-			 var chkUPD = document.getElementById("chkUPD");
-			 var upd = document.getElementById("upd");
-			 upd.disabled = chkUPD.checked ? false : true;
-			 if (!upd.disabled) {
-					 upd.focus();
-			 }
-	 }
-
-
-function modificaLink(parametro,valore){
-	var link = document.getElementById('link').href;
-	if(document.getElementById('chkMaster').checked) {
-		link = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_000.pdf";
-	}else if(document.getElementById('chkUPD').checked) {
-		link = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_"+ document.getElementById('upd').value +".pdf";
-	}
-	document.getElementById('link').href=link;
-	document.getElementById('link').target="_blank";
-}
-
-
-/* al momento disattivate in quanto non utili
-
-function modificaNote(parametro,valore){
-	var note = document.getElementById('note').href;
-	if(document.getElementById('chkMaster').checked) {
-		note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_000E.pdf";
-	}else{
-		note = "https://www.hrzucchetti.it/infoupdate/"+ document.getElementById('applicativo').value + "/" + document.getElementById('applicativo').value + "_" + document.getElementById('versione').value +"_XXXE.pdf";
-	}
-	document.getElementById('note').href=note;
-	document.getElementById('note').target="_blank";
-}
-*/
-
-function modificaVideo(parametro,valore){
-	var video = document.getElementById('video').href;
-	if(document.getElementById('applicativo').value=="HR1") {
-		video = "https://www.zucchetti.it/areariservata/Documenti/Accademia/Videoguida_PagheI_v"+ document.getElementById('versione').value +".pdf";
-	}else{
-		video = "#";
-	}
-	document.getElementById('video').href=video;
-	document.getElementById('video').target="_blank";
-}
-
-</script>
-
+    <script src="script.js" defer></script>
 </head>
 <body>
- <div class="header">
-	<img src="img/logo.png" alt="logo" />
-	<br>
+<div class="header">
+    <img src="img/logo.png" alt="logo" /><br>
     <a href="https://github.com/nicolagalassi?tab=repositories" target="_blank"><i class="fab fa-github fa-2xl" style="--fa-animation-duration: 2s;"></i></a>
     <a href="https://t.me/galax95" target="_blank"><i class="fab fa-telegram fa-2xl" style="--fa-animation-duration: 2s;"></i></a>
-	<a href="https://www.paypal.com/donate/?hosted_button_id=85GF5T6TWTZMG" target="_blank"><i class="fas fa-dollar fa-2xl" style="--fa-animation-duration: 2s;"></i></a>
- </div>
+    <a href="https://www.paypal.com/donate/?hosted_button_id=85GF5T6TWTZMG" target="_blank"><i class="fas fa-dollar fa-2xl" style="--fa-animation-duration: 2s;"></i></a>
+</div>
 
- <div class="navbar">
-  <a href="https://circolarizucchetti.netlify.app/" class="active">HOME</a>
-  <a href="https://circolarizucchetti.netlify.app/form.html">COME FARE</a>
- </div>
+<div class="navbar">
+    <a href="https://circolarizucchetti.netlify.app/" class="active">HOME</a>
+    <a href="https://circolarizucchetti.netlify.app/form.html">COME FARE</a>
+</div>
 
 <div class="main">
-<p><label>
-Applicativo:<br/>
-<select name="applicativo" id="applicativo">
-<option value="HR1">Paghe Infinity</option>
-<option value="MD7">CU770</option>
-<option value="ERM">Portale HR</option>
-<option value="HRC">HR Comunicazioni</option>
-<option value="DWH">HR Analytics</option>
-</select>
-</label></p>
-<p><label>
- Versione:
-<input name="versione" type="text" id="versione" value="23.08.00" size="8" maxlength="8" />
-</label></p>
-<br>
-<label class="container" for="chkMaster">
-  	Master
-    <input type="radio" id="chkMaster" name="chkVersion" onclick="EnableDisableTextBox()" checked="yes" />
-		<span class="checkmark"></span>
-</label>
-<label class="container" for="chkUPD">
-	  UPD
-    <input type="radio" id="chkUPD" name="chkVersion" onclick="EnableDisableTextBox()" />
-		<span class="checkmark"></span>
-</label>
-<br>
-<p><label>
- Numero UPD:
- <input name="upd" type="text" id="upd" value="001" size="3" maxlength="3" disabled="disabled"/>
-</label></p>
-<p>
- <a href='index.html' class="sommario" id='link'>
-  <button class="button button1" value='Crea Link Circolare' onClick="modificaLink('versione','upd')"/>
- 	 SOMMARIO dei CAMBIAMENTI
-  </button>
-<!-- al momento eliminato
- <a href='index.html' class="sommario" id='note'>
-  <button class="button button2" value='Crea Link Note' onClick="modificaNote('versione','upd')"/>
- 	 NOTE DI RILASCIO
-  </button>
- </a>
--->
-&nbsp
- <a href='index.html' class="sommario" id='video'>
-	<button class="button button2" value='Crea Link Video' onClick="modificaVideo('versione','upd')"/>
-		VIDEO SOMMARIO
-	</button>
- </a>
-</p>
+    <p>
+        <label for="applicativo">Applicativo:<br/>
+            <select name="applicativo" id="applicativo">
+                <option value="HR1">Paghe Infinity</option>
+                <option value="MD7">CU770</option>
+                <option value="ERM">Portale HR</option>
+                <option value="HRC">HR Comunicazioni</option>
+                <option value="DWH">HR Analytics</option>
+            </select>
+        </label>
+    </p>
+    <p><label for="versione">Versione:
+            <input name="versione" type="text" id="versione" value="23.08.00" size="8" maxlength="8"/>
+        </label>
+    </p>
+    <br>
+    <label class="container" for="chkMaster">
+        Master
+        <input type="radio" id="chkMaster" name="chkVersion" checked>
+        <span class="checkmark"></span>
+    </label>
+    <label class="container" for="chkUPD">
+        UPD
+        <input type="radio" id="chkUPD" name="chkVersion">
+        <span class="checkmark"></span>
+    </label>
+    <br>
+    <p><label for="upd">Numero UPD:
+            <input name="upd" type="text" id="upd" value="001" size="3" maxlength="3" disabled/>
+        </label>
+    </p>
+    <p>
+        <button class="button button1" onclick="modificaLink()">SOMMARIO dei CAMBIAMENTI</button>
+        <button class="button button2" onclick="modificaVideo()">VIDEO SOMMARIO</button>
+    </p>
 </div>
 </body>
 </html>
