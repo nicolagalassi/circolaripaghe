@@ -27,10 +27,19 @@ body {
   color: #7858A6;
 }
 
-.header img {
-  width: 1000px;
-  height: 200px;
+/* Stili per il logo */
+.logo {
+    width: 200px; /* Dimensioni del logo desktop */
+    height: auto; /* Mantieni l'aspetto proporzionato */
 }
+
+/* Media query per dispositivi con larghezza massima di 600px (dispositivi mobile) */
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 150px; /* Riduci le dimensioni del logo per la versione mobile */
+    }
+}
+
 
 
 /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
@@ -254,16 +263,4 @@ select {
 }
 
 
-/* Stili per il logo */
-.logo {
-    width: 200px; /* Dimensioni del logo desktop */
-    height: auto; /* Mantieni l'aspetto proporzionato */
-}
-
-/* Media query per dispositivi con larghezza massima di 600px (dispositivi mobile) */
-@media only screen and (max-width: 600px) {
-    .logo {
-        width: 150px; /* Riduci le dimensioni del logo per la versione mobile */
-    }
-}
 
