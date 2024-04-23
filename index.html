@@ -47,11 +47,12 @@
         <input type="radio" id="chkMaster" name="chkVersion" checked>
         <span class="checkmark"></span>
     </label>
-    <label class="container" for="chkUPD">
+   <label class="container" for="chkUPD">
         UPD
-        <input type="radio" id="chkUPD" name="chkVersion">
+        <input type="radio" id="chkUPD" name="chkVersion" onclick="EnableDisableTextBox()">
         <span class="checkmark"></span>
     </label>
+
     <br>
     <p><label for="upd">Numero UPD:
             <input name="upd" type="text" id="upd" value="001" size="3" maxlength="3" disabled/>
