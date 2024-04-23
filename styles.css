@@ -252,3 +252,18 @@ select {
     width: 100%;
   }
 }
+
+
+/* Stili per il logo */
+.logo {
+    width: 200px; /* Dimensioni del logo desktop */
+    height: auto; /* Mantieni l'aspetto proporzionato */
+}
+
+/* Media query per dispositivi con larghezza massima di 600px (dispositivi mobile) */
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 150px; /* Riduci le dimensioni del logo per la versione mobile */
+    }
+}
+
